@@ -13,13 +13,7 @@ use Cycle\ORM\Select\Repository;
  */
 class UserRepository extends Repository implements UserProviderInterface
 {
-    protected string $identity;
-
-    public function __construct(Select $select, string $identity = 'email')
-    {
-        parent::__construct($select);
-        $this->identity = $identity;
-    }
+    protected string $identity = 'email';
 
     /**
      * @param string $identity
@@ -35,7 +29,7 @@ class UserRepository extends Repository implements UserProviderInterface
      * @param $identity
      * @return UserInterface|null
      */
-    public function provide($identity): ?UserInterface
+    public function provide($identity):? UserInterface
     {
         return $this->select()->wherePK($identity)->orWhere($this->identity, $identity)->fetchOne();
     }
