@@ -1,1 +1,4 @@
-# auth_user_provider
+# Install 
+```bash
+composer require bermudaphp/auth_user_provider
+````
