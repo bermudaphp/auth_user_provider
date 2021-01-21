@@ -31,6 +31,6 @@ class UserRepository extends Repository implements UserProviderInterface
      */
     public function provide($identity):? UserInterface
     {
-        return $this->select()->wherePK($identity)->orWhere($this->identity, $identity)->fetchOne();
+        return $this->select()->where($this->identity, $identity)->fetchOne();
     }
 }
