@@ -1,11 +1,8 @@
 <?php
 
-
 namespace Bermuda\Authentication;
 
-
 use Cycle\ORM\Select\Repository;
-
 
 /**
  * Class UserRepository
