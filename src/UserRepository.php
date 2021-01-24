@@ -1,6 +1,6 @@
 <?php
 
-namespace Bermuda\Authentication;
+namespace App\Entity;
 
 use Cycle\ORM\Select\Repository;
 
