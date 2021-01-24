@@ -10,18 +10,6 @@ use Cycle\ORM\Select\Repository;
  */
 class UserRepository extends Repository implements UserProviderInterface
 {
-    protected string $identity = 'email';
-
-    /**
-     * @param string $identity
-     * @return $this
-     */
-    public function setIdentity(string $identity): self
-    {
-        $this->identity = $identity;
-        return $this;
-    }
-
     /**
      * @param string|array $identity
      * @return UserInterface|null
