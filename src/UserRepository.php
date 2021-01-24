@@ -23,7 +23,7 @@ class UserRepository extends Repository implements UserProviderInterface
     }
 
     /**
-     * @param $identity
+     * @param string|array $identity
      * @return UserInterface|null
      */
     public function provide($identity):? UserInterface
